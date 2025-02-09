@@ -23,7 +23,7 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Chobby &nbsp;{" "}
+            천민규 &nbsp;{" "}
             <span className="sm:block hidden">| 프론트엔드 개발자</span>
           </p>
         </Link>

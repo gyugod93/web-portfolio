@@ -20,7 +20,12 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-
+import oracle from "./tech/oracle.png";
+import notion from "./tech/notion.png";
+import supabase from "./tech/supabase.png";
+import vercel from "./tech/vercel.png";
+import slack from "./tech/slack.webp";
+import firebase from "./tech/firebase.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -72,6 +77,7 @@ export {
   close,
   css,
   docker,
+  oracle,
   figma,
   git,
   html,
@@ -97,4 +103,9 @@ export {
   openai,
   Nwitter,
   Instar,
+  notion,
+  slack,
+  firebase,
+  supabase,
+  vercel,
 };

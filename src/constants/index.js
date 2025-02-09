@@ -27,6 +27,7 @@ import {
   alyak,
   facebook,
   openai,
+  oracle,
   Nwitter,
   Instar,
   ArcGIS,
@@ -40,6 +41,12 @@ import {
   Unknown,
   Sanghyun,
   MyBro,
+  github,
+  notion,
+  slack,
+  firebase,
+  supabase,
+  vercel,
 } from "../assets";
 
 export const navLinks = [
@@ -59,19 +66,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "React 웹 개발자",
+    title: "React 개발자",
     icon: web,
   },
   {
-    title: "React Native 앱 개발자",
+    title: "Next.js 개발자",
     icon: mobile,
   },
   {
-    title: "Node.js 및 Spring 서버 개발자",
+    title: "TypeScript 개발자",
     icon: backend,
   },
   {
-    title: "3D 모델 및 AI 공부 중",
+    title: "성능 최적화",
     icon: creator,
   },
 ];
@@ -106,84 +113,100 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
     name: "Three JS",
     icon: threejs,
+  },
+  {
+    name: "firebase",
+    icon: firebase,
+  },
+  {
+    name: "supabase",
+    icon: supabase,
+  },
+  {
+    name: "vercel",
+    icon: vercel,
   },
   {
     name: "git",
     icon: git,
   },
   {
+    name: "github",
+    icon: github,
+  },
+  {
     name: "figma",
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "oracle",
+    icon: oracle,
+  },
+  {
+    name: "notion",
+    icon: notion,
+  },
+  {
+    name: "slack",
+    icon: slack,
   },
 ];
 
 const experiences = [
   {
-    title: "React 웹 애플리케이션 개발",
-    company_name: "Tiktok 클론코딩",
+    title: "내일배움캠프 부트캠프 수료",
+    company_name: "JavaScript / React / Next.js",
     icon: tiktok,
     iconBg: "#383E56",
-    date: "2023.02 - 2023.03",
+    date: "2023.09 - 2024.01",
     points: [
-      "React.js 및 기타 관련 기술을 사용하여 웹 애플리케이션 개발 및 유지보수.",
-      "사용자 경험을 위한 API 활용 및 모바일 활용성 증가를 위한 스타일 사용",
-      "파일 업로드 기능을 구현하고, Video 태그의 autoplay, loop를 활용한 Tiktok 클로닝",
-      "프로필 조회 및 게시물을 검색하고, 각 게시물에 좋아요 및 댓글 기능 활성화 쿼리",
+      "JavaScript와 React를 활용한 5~6개의 팀 프로젝트 수행",
+      "React Query, Redux 등 실무 중심 라이브러리 학습 및 적용",
+      "90명 이상의 사용자 피드백을 반영한 사이트 유지 보수 경험",
+      "2회의 팀 리더 역할로 프로젝트 리딩 및 협업 역량 강화",
     ],
   },
   {
-    title: "React Native 앱 개발",
-    company_name: "ApujiMK",
+    title: "항해99 부트캠프 수료",
+    company_name: "Next.js / 알고리즘(Python)",
     icon: alyak,
     iconBg: "#383E56",
-    date: "2020.09 - 2020.12",
+    date: "2024.07 - 2024.10",
     points: [
-      "공공기관 API를 활용한 데이터 조회 및 사용자 검색어에 따른 의약품 결과 및 상세정보 반환",
-      "지도 API를 활용하여 주변 약국을 조회하고, 응급 상황시 연락가능한 연락처 제공",
-      "알약 정보를 확인하고, 사용자 리뷰를 통한 약품에 대한 무지함을 해소하고자 개발",
-      "실시간 반응을 활용한 데이터 추가 및 검색결과 조회로 사용자 경험 증대",
+      "Python을 활용한 알고리즘 문제풀이 (백준 골드4 달성)",
+      "Next.js를 이용한 개인 프로젝트 수행 및 성능 최적화 (SSR, 이미지 최적화, 캐싱 관리 등)",
+      "코드 품질 향상을 위한 중복 코드 제거 및 리팩토링",
+      "높은 참여율과 적극적인 활동으로 상장 수여",
     ],
   },
-  {
-    title: "AI 웹 애플리케이션 개발",
-    company_name: "DALL-E",
-    icon: openai,
-    iconBg: "#E6DEDD",
-    date: "2023.03 - 2023.04",
-    points: [
-      "Open AI 모델을 학습시켜, 사용자 쿼리에 따른 사진결과 반환 및 사용자 프롬프트 저장 학습",
-      "학습 및 반환된 사진을 출력하여 1024 X 1024의 화질 JPEG 데이터를 저장하는 기능 구현",
-      "커뮤니티를 생성하여, 특정 쿼리를 입력하여 반환된 이미지를 조회할 수 있는 기능을 제공",
-      "URL을 주변 지인에게 공유하여, 학습 데이터 강화 및 정확한 정보를 추출할 수 있도록 학습",
-    ],
-  },
-  {
-    title: "Node.js 백엔드 개발",
-    company_name: "facebook",
-    icon: facebook,
-    iconBg: "#E6DEDD",
-    date: "2019. 12 - 2020.02",
-    points: [
-      "로그인 및 회원가입과 해당 유저의 로그인 기록을 유지하는 토큰을 생성하여 반환하는 백엔드 API 개발",
-      "유저의 데이터 파일 (이미지, 동영상)을 변환하여 Base64 형태로 인코딩 된 URL을 저장하고 출력하는 API 개발",
-      "커뮤니티를 생성하여 좋아요, 댓글 등 UNION Query 사용하여 다양한 테이블의 데이터를 조합하고 반환하는 API 개발",
-      "유저 스토리 및 게시글 등 실시간 상호작용이 가능한 데이터를 보관하고, 유저 채팅을 Socket.io를 사용한 실시간 양방향 개발",
-    ],
-  },
+  // {
+  //   title: "AI 웹 애플리케이션 개발",
+  //   company_name: "DALL-E",
+  //   icon: openai,
+  //   iconBg: "#E6DEDD",
+  //   date: "2023.03 - 2023.04",
+  //   points: [
+  //     "Open AI 모델을 학습시켜, 사용자 쿼리에 따른 사진결과 반환 및 사용자 프롬프트 저장 학습",
+  //     "학습 및 반환된 사진을 출력하여 1024 X 1024의 화질 JPEG 데이터를 저장하는 기능 구현",
+  //     "커뮤니티를 생성하여, 특정 쿼리를 입력하여 반환된 이미지를 조회할 수 있는 기능을 제공",
+  //     "URL을 주변 지인에게 공유하여, 학습 데이터 강화 및 정확한 정보를 추출할 수 있도록 학습",
+  //   ],
+  // },
+  // {
+  //   title: "Node.js 백엔드 개발",
+  //   company_name: "facebook",
+  //   icon: facebook,
+  //   iconBg: "#E6DEDD",
+  //   date: "2019. 12 - 2020.02",
+  //   points: [
+  //     "로그인 및 회원가입과 해당 유저의 로그인 기록을 유지하는 토큰을 생성하여 반환하는 백엔드 API 개발",
+  //     "유저의 데이터 파일 (이미지, 동영상)을 변환하여 Base64 형태로 인코딩 된 URL을 저장하고 출력하는 API 개발",
+  //     "커뮤니티를 생성하여 좋아요, 댓글 등 UNION Query 사용하여 다양한 테이블의 데이터를 조합하고 반환하는 API 개발",
+  //     "유저 스토리 및 게시글 등 실시간 상호작용이 가능한 데이터를 보관하고, 유저 채팅을 Socket.io를 사용한 실시간 양방향 개발",
+  //   ],
+  // },
 ];
 
 const testimonials = [
