@@ -5,6 +5,27 @@ import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+
+  useEffect(() => {
+    return () => {
+      // 명시적으로 GPU 리소스 해제
+      if (computer && computer.scene) {
+        computer.scene.traverse((object) => {
+          if (object.isMesh) {
+            if (object.geometry) object.geometry.dispose();
+            if (object.material) {
+              if (Array.isArray(object.material)) {
+                object.material.forEach((material) => material.dispose());
+              } else {
+                object.material.dispose();
+              }
+            }
+          }
+        });
+      }
+    };
+  }, []);
+
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor={"black"} />

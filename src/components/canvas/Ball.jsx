@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -37,13 +37,15 @@ const Ball = (props) => {
 
 const BallCanvas = ({ icon }) => {
   return (
-    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
+    <div style={{ width: "200px", height: "200px", margin: "10px" }}>
+      <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} />
+          <Ball imgUrl={icon} />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+    </div>
   );
 };
 

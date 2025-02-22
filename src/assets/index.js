@@ -26,6 +26,8 @@ import supabase from "./tech/supabase.png";
 import vercel from "./tech/vercel.png";
 import slack from "./tech/slack.webp";
 import firebase from "./tech/firebase.png";
+import aws from "./tech/aws.png";
+import styledComponents from "./tech/styled components.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -54,6 +56,11 @@ import SamilFood from "./SamilSchoolFood.png";
 import Unknown from "./Unknown.png";
 import Sanghyun from "./Sanghyun.jpg";
 import MyBro from "./MyBro.png";
+import Booker from "./Booker.png";
+import BeatBridge from "./BeatBridge.png";
+import CoupleThePl from "./CoupleThePl.png";
+import ShareLife from "./ShareLife.png";
+import Zani from "./Zani.png";
 
 export {
   MyBro,
@@ -108,4 +115,11 @@ export {
   firebase,
   supabase,
   vercel,
+  aws,
+  styledComponents,
+  Booker,
+  BeatBridge,
+  CoupleThePl,
+  ShareLife,
+  Zani,
 };
