@@ -4,7 +4,7 @@ import RobotCanvas from "./canvas/Robot";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -24,11 +24,9 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className="absolute inset-0 top-[30%] sm:top-[40%]">
-        {" "}
-        {/* 여기를 수정했습니다 */}
-        <RobotCanvas />
-      </div>
+      {/* <div className="absolute inset-0 top-[30%] sm:top-[40%] pointer-events-none"> */}
+      <RobotCanvas />
+      {/* </div> */}
     </section>
   );
 };

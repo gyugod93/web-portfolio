@@ -1,5 +1,5 @@
 import React, { Suspense, useRef, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
   Preload,
@@ -13,6 +13,7 @@ const Robot = () => {
   const group = useRef();
   const { scene, animations } = useGLTF("/robot/scene.gltf");
   const { actions } = useAnimations(animations, group);
+  const { viewport } = useThree();
 
   useEffect(() => {
     if (actions["Prowler_Rig Bipe"]) {
@@ -27,13 +28,21 @@ const Robot = () => {
       if (group.current.position.x > 40) {
         group.current.position.x = -40;
       }
-      group.current.position.y =
-        Math.sin(state.clock.elapsedTime * 2) * 0.05 - 2.5;
+      // viewport 높이에 따라 y 위치 조정
+      group.current.position.y = -viewport.height / 3;
     }
   });
 
+  // scale을 viewport 너비에 따라 조정 (선택적)
+  const scale = Math.min(3, viewport.width / 10);
+
   return (
-    <primitive ref={group} object={scene} scale={4} rotation-y={Math.PI / 2} />
+    <primitive
+      ref={group}
+      object={scene}
+      scale={scale}
+      rotation-y={Math.PI / 2}
+    />
   );
 };
 
@@ -43,7 +52,7 @@ const RobotCanvas = () => {
       frameloop="always"
       gl={{ preserveDrawingBuffer: true }}
       camera={{ position: [0, 0, 35], fov: 55 }}
-      className="w-full h-full absolute top-0 left-0"
+      className="w-full h-full absolute bottom-0 left-0"
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
