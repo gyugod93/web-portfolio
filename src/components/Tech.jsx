@@ -1,36 +1,25 @@
-import React from "react";
-import { BallCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
+import React, { useState, useEffect } from "react";
 import { technologies } from "../constants";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useCallback } from "react";
 
+// 3D 모델링을 완전히 제거하고 2D 대체 컴포넌트 사용
 const Tech = () => {
-  const [visibleCount, setVisibleCount] = useState(6);
-
-  const handleScroll = useCallback(() => {
-    // 스크롤 바닥에 도달했을 때
-    if (
-      window.innerHeight + document.documentElement.scrollTop + 1 >=
-      document.documentElement.scrollHeight
-    ) {
-      // 6개씩 추가
-      setVisibleCount((prevCount) =>
-        Math.min(prevCount + 6, technologies.length)
-      );
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
-
   return (
     <div className="flex flex-wrap justify-center gap-10">
-      {technologies.slice(0, visibleCount).map((tech) => (
-        <div key={tech.name}>{/* <BallCanvas icon={tech.icon} /> */}</div>
+      {technologies.map((technology) => (
+        <div
+          className="w-28 h-28 flex flex-col items-center justify-center"
+          key={technology.name}
+        >
+          {/* 3D 볼 대신 일반 이미지 사용 */}
+          <div className="w-20 h-20 rounded-full bg-tertiary flex items-center justify-center p-3 mb-2">
+            <img
+              src={technology.icon}
+              alt={technology.name}
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <p className="text-white text-sm text-center">{technology.name}</p>
+        </div>
       ))}
     </div>
   );

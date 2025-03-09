@@ -1,39 +1,23 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import React from "react";
 
-import CanvasLoader from "../Loader";
-
-const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
-  return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
-  );
-};
-
+// 3D 지구본 대신 사용할 정적 컴포넌트
 const EarthCanvas = () => {
   return (
-    <Canvas
-      shadows
-      frameloop="demand"
-      gl={{ preserveDrawingBuffer: true }}
-      camera={{
-        fov: 45,
-        near: 0.1,
-        far: 200,
-        position: [-4, 3, 6],
-      }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          autoRotate
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Earth />
-      </Suspense>
-    </Canvas>
+    <div className="w-full h-full flex items-center justify-center bg-tertiary bg-opacity-10 rounded-lg">
+      <div className="relative w-4/5 h-4/5 rounded-full bg-blue-500 flex items-center justify-center overflow-hidden">
+        {/* 간단한 지구 스타일링 */}
+        <div className="absolute w-full h-full opacity-40">
+          <div className="absolute w-1/2 h-1/3 bg-green-600 top-1/4 left-1/4 rounded-full transform rotate-45"></div>
+          <div className="absolute w-1/3 h-1/4 bg-green-600 top-2/4 left-1/3 rounded-full"></div>
+          <div className="absolute w-1/4 h-1/5 bg-green-600 top-1/3 left-1/2 rounded-full"></div>
+        </div>
+        {/* 구름 효과 */}
+        <div className="absolute w-full h-full bg-white opacity-30">
+          <div className="absolute w-1/4 h-1/6 bg-white top-1/5 left-1/5 rounded-full opacity-40"></div>
+          <div className="absolute w-1/5 h-1/8 bg-white top-1/2 left-1/3 rounded-full opacity-40"></div>
+        </div>
+      </div>
+    </div>
   );
 };
 
