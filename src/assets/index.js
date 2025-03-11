@@ -61,6 +61,7 @@ import BeatBridge from "./BeatBridge.png";
 import CoupleThePl from "./CoupleThePl.png";
 import ShareLife from "./ShareLife.png";
 import Zani from "./Zani.png";
+import introduceTeam from './introduceTeam.png';
 
 export {
   MyBro,
@@ -122,4 +123,5 @@ export {
   CoupleThePl,
   ShareLife,
   Zani,
+  introduceTeam,
 };

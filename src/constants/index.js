@@ -54,6 +54,7 @@ import {
   CoupleThePl,
   BeatBridge,
   Zani,
+  introduceTeam,
 } from "../assets";
 
 export const navLinks = [
@@ -352,6 +353,28 @@ const projects = [
     image: Zani,
     source_code_link:
       "https://github.com/KANG0417/moviePage-Zani?tab=readme-ov-file",
+  },
+  {
+    name: "introduce team",
+    description:
+      "첫 부트캠프 자기기 소개 팀 프로젝트",
+    tags: [
+      {
+        name: "HTML5",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: introduceTeam,
+    source_code_link:
+      "https://github.com/kms99/IntroduceTeam",
   },
   // {
   //   name: "쵸비 맵",
