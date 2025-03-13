@@ -268,7 +268,7 @@ const projects = [
       },
     ],
     image: ShareLife,
-    source_code_link: "https://github.com/kwb020312/Google_Map_Wipco",
+    source_code_link: "https://github.com/gyugod-s-team/ShareLife-SNS-",
   },
   {
     name: "Booker",
