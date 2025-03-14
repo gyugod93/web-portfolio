@@ -66,13 +66,15 @@ const Contact = () => {
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>저에게 연락하고 싶으신가요?</p>
-        {/* 헤드라인 크기만 조정 */}
-        <h3 className={`${styles.sectionHeadText} text-2xl md:text-2xl`}>언제든지 연락주세요!</h3>
+        {/* 헤드라인 텍스트 크기 조정 및 고정된 높이와 줄바꿈 설정 */}
+        <h3 className="text-white font-black text-[20px] sm:text-[38px] max-w-full leading-tight mt-2 mb-4">
+          언제든지 연락주세요!
+        </h3>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+          className="mt-8 flex flex-col gap-8"
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">
