@@ -67,7 +67,7 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>저에게 연락하고 싶으신가요?</p>
         {/* 헤드라인 크기만 조정 */}
-        <h3 className={`${styles.sectionHeadText} text-3xl md:text-4xl`}>언제든지 연락주세요!</h3>
+        <h3 className={`${styles.sectionHeadText} text-3xl md:text-3xl`}>언제든지 연락주세요!</h3>
 
         <form
           ref={formRef}
